@@ -1,0 +1,11 @@
+--2014-04-23 15:26:35--  http://www.bing.com/search?q=There.Will.Be.Blood.2007/
+Resolving www.bing.com (www.bing.com)... 204.79.197.200
+Connecting to www.bing.com (www.bing.com)|204.79.197.200|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `search_result.html'
+
+     0K .......... .......... .......... .......... ....       43.4K=1.0s
+
+2014-04-23 15:26:37 (43.4 KB/s) - `search_result.html' saved [46078]
+

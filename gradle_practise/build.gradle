@@ -1,0 +1,39 @@
+
+defaultTasks 'upper', 'hello'
+
+task hello << {
+    println 'Hello Earth'
+}
+hello.doFirst {
+    println 'Hello Venus'
+}
+hello.doLast {
+    println 'Hello Mars'
+}
+hello << {
+    println 'Hello Jupiter'
+}
+
+task upper << {
+	String name = "Shovon"
+	println "Original name : " + name
+	println "Upper case name :" + name.toUpperCase();
+}
+task dep(dependsOn: hello) << {
+println "I depends on task hello"
+}
+
+4.times { counter ->
+    task "task$counter" << {
+        println "I'm task number $counter"
+    }
+}
+
+task myTask {
+    ext.myProperty = "myValue"
+}
+
+task printTaskProperties << {
+    println myTask.myProperty
+}
+

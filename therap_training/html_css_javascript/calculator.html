@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8"/>
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="calculator_script.js"></script>
+
+</head>
+<body>
+
+
+<div id="main">
+    <div id="calculator" class="calc">
+        <h3>Calculator</h3>
+
+        <div id="display">
+            <label>
+                <input id="monitor" type="text" name="calc_monitor" class="display" />
+            </label>
+        </div>
+        <div id="buttons" class="calc">
+
+            <div class="buttons" id="button_set1">
+                <input id="7" type="button" class="button" value="7" onclick="buttonClicked(this.value)"/>
+                <input id="8" type="button" class="button" value="8" onclick="buttonClicked(this.value)"/>
+                <input id="9" type="button" class="button" value="9" onclick="buttonClicked(this.value)"/>
+                <input id="/" type="button" class="button" value="/" onclick="buttonClicked(this.value)"/>
+                <input id="back" type="button" class="button" value="&#8592;" onclick="buttonClicked('back')"/>
+                <input id="clear" type="button" class="button" value="CE" onclick="buttonClicked(this.value)"/>
+            </div>
+
+            <div class="buttons" id="button_set2">
+                <input id="4" type="button" class="button" value="4" onclick="buttonClicked(this.value)"/>
+                <input id="5" type="button" class="button" value="5" onclick="buttonClicked(this.value)"/>
+                <input id="6" type="button" class="button" value="6" onclick="buttonClicked(this.value)"/>
+                <input id="*" type="button" class="button" value="*" onclick="buttonClicked(this.value)"/>
+                <input id="(" type="button" class="button" value="(" onclick="buttonClicked(this.value)"/>
+                <input id=")" type="button" class="button" value=")" onclick="buttonClicked(this.value)"/>
+            </div>
+
+
+            <div class="buttons" id="button_set3">
+                <input id="1" type="button" class="button" value="1" onclick="buttonClicked(this.value)"/>
+                <input id="2" type="button" class="button" value="2" onclick="buttonClicked(this.value)"/>
+                <input id="3" type="button" class="button" value="3" onclick="buttonClicked(this.value)"/>
+                <input id="-" type="button" class="button" value="-" onclick="buttonClicked(this.value)"/>
+                <input id="x2" type="button" class="button" value="&#8743;" onclick="buttonClicked('x2')"/>
+                <input id="root" type="button" class="button" value="&#8730;" onclick="buttonClicked('root')"/>
+            </div>
+
+            <div class="buttons" id="button_set4">
+                <input id="0" type="button" class="button" value="0" onclick="buttonClicked(this.value)"/>
+                <input id="." type="button" class="button" value="." onclick="buttonClicked(this.value)"/>
+                <input id="%" type="button" class="button" value="%" onclick="buttonClicked(this.value)"/>
+                <input id="+" type="button" class="button" value="+" onclick="buttonClicked(this.value)"/>
+                <input id="equal_button" type="button" value="=" onclick="buttonClicked(this.value)"/>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

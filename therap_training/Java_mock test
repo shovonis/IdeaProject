@@ -1,0 +1,1533 @@
+Question : 1
+If you run the code below, what gets printed out?
+
+public class Test {
+
+    public static void main(String argv[]){
+        String s=new String("Bicycle");
+        int iBegin=1;
+        char iEnd='a';
+        System.out.println(s.substring(iBegin,iEnd));
+        }
+}
+A.   Bic
+B.   icy
+C.   ic
+D.	   error: no method matching substring(int,char)
+Ans : D
+
+Question : 2
+What is displayed when the following code is executed:
+String s = "abcdef";
+System.out.println(s.charAt(4));
+A.   d
+B.   e
+C.   Nothing. An ArrayIndexOutOfBoundsException is thrown
+D.   The code does not compile. charAt() is not a valid method of the String class.
+Ans: B
+
+Question : 3
+True or False.
+Abstract methods can be declared as static.
+A.   True
+B.   False
+C.   Can't say
+D.   None of the above
+Ans: B
+
+Question : 4
+In a thread, the wait() method must be called inside which of the following:
+A.   A while() loop
+B.   The run() method
+C.   synchronised code
+D.   The constructor
+Ans:B
+
+Question : 5
+Consider the following piece of code and select the correct statement(s):
+public class Test{
+final int x = 0;
+Test(){
+x = 1;
+}
+final int aMethod(){
+return x;
+}
+}
+A.   The code fails to compile. The compiler complains because there is a final method ("aMethod") in a non-final class.
+B.   The code compiles correctly. On execution, an exception is thrown when the Test() constructor is executed.
+C.   The code fails to compile because an attempt is made to alter the value of a final variable.
+D.   The code fails to compile because only methods can be declared as final (and therefore "final int x = 0" is not valid).
+
+Ans:C
+ 
+Question : 6
+Thread class setPriority(int newPriority) method allow ___________ MAX_PRIORITY ?
+A.   10
+B.   11
+C.   5
+D.   12
+Ans: A
+
+Question : 7
+Which of the following are methods within the String class.
+A.   substring()
+B.   startsWith()
+C.   toString()
+D.   All of the above
+Ans: D
+
+Question : 8
+Oracle's OCI (Oracle Call Interface) client-side driver is an example of ?.
+A.   Type 1: Driver
+B.   Type 2: Driver
+C.   Type 3: Driver
+D.   Type 4: Driver
+Ans: 
+
+Question : 9
+What is displayed when the following piece of code is compiled and executed:
+class Test{
+public static void main(String [] args){
+Base b = new Subclass();
+System.out.println(b.x);
+System.out.println(b.method());
+}
+}
+class Base{
+int x = 2;
+int method(){
+return x;
+}
+}
+class Subclass extends Base{
+int x = 3;
+int method(){
+return x;
+}
+}
+A.   Nothing. The code fails to compile because the object b is not created in a valid way.
+B.   2 3
+C.   2 2
+D.   3 3
+Ans: D
+
+Question : 10
+Which of the following is correct?
+A.   String temp [] = new String {"j" "a" "z"};
+B.   String temp [] = { "j " " b" "c"};
+C.   String temp = {"a", "b", "c"};
+D.   String temp [] = {"a", "b", "c"};
+Ans: D
+
+Question : 11
+try{
+        File f = new File("a.txt");
+            }catch(Exception e){
+                
+            }catch(IOException io){
+                
+            }
+Is this code create new file name a.txt ?
+A.   True
+B.   False
+C.   Compilation Error
+D.   None
+Ans: B 
+
+Question : 12
+You want to extend the functionality of the String class, and decide that the best approach is to subclass String.
+Which of the following statements are correct.
+A.   The approach fails, because the String class is declared as final and cannot be subclassed.
+B.   The approach succeeds, and it is therefore possible to override the standard functionality provided by String.
+C.   The approach fails, because the String class is declared as abstract, and therefore it cannot be subclassed.
+D.   None of the above
+Ans: A
+
+Question : 13
+What is the output of the bellow code ?
+
+public enum Test {
+    BREAKFAST(7, 30), LUNCH(12, 15), DINNER(19, 45);
+    
+    private int hh;
+
+    private int mm;
+
+    Test(int hh, int mm) {
+        assert (hh >= 0 && hh <= 23) : "Illegal hour.";
+        assert (mm >= 0 && mm <= 59) : "Illegal mins.";
+        this.hh = hh;
+        this.mm = mm;
+    }
+
+    public int getHour() {
+        return hh;
+    }
+
+    public int getMins() {
+        return mm;
+    }
+    
+    public static void main(String args[]){
+        Test t = BREAKFAST;
+        System.out.println(t.getHour() +":"+t.getMins());
+    }
+}
+A.   7:30
+B.   Compile With Error
+C.   Compile Without Error but Runtime Exception
+D.   None of the above
+
+Ans: A
+
+Question : 14
+Consider the following piece of code and select the correct statements.
+1. Object o = new String("abcd");
+2. String s = o;
+3. System.out.println(s);
+4. System.out.println(o);
+A.   The following is displayed: abcd abcd
+B.   The code fails to compile at line 1.
+C.   The code fails to compile at line 2
+D.   The code fails to compile at line 4.
+Ans: C
+
+Question : 15
+Suppose a MyException should be thrown if Condition() is true, which statements do you have to insert ?
+1: public void aMethod {
+2:
+3: if (Condition) {
+4:
+5: }
+6:
+7: }
+A.   throw new Exception() at line 4
+B.   throw new MyException() at line 4
+C.   throws IOException at line 1
+D.   throws IOException at line 1
+Ans: C,B
+
+Question : 16
+
+What is the output for the below code ?
+public class Test{
+     int x = 0;
+    
+     public Test(int inVal) throws Exception{
+     if (inVal != this.x){
+          System.out.println("same data");
+     throw new Exception("Invalid");
+     }
+     }
+    
+1.     public static void main(String args[]){
+2.     Test t = new Test(4);
+3.     }
+    }
+
+A.   Invalid
+B.   same data.
+C.   Compile successfully
+D.   The code fails to compile at line 2. The compiler complains that there is an uncaught exception.
+Ans: D
+
+Question : 17
+Which of the following statements are correct regarding the RandomAccessFile class?
+
+
+1) An IOException is thrown if the specified file doesn't exist when created using the "r" mode.
+
+
+2) This class has a method which allows a file to be deleted from the hard disk.
+
+
+3) It is possible to use this class in conjunction with the DataInputStream class.
+
+
+4) When used with the "rw" mode, the specified file is created on a disk drive, if it doesn't already exist.
+
+
+5) There are methods to read and write primatives (eg, readInt(), writeInt(), etc).
+A.   1 , 4 and 5
+B.   1 and 2
+C.   1 , 3 and 5
+D.   None of the above
+
+Question : 18
+Consider the following:
+class A extends Integer{
+int x = 0;
+}
+Select all valid statements.
+A.   The code will compile correctly.
+B.   The code will not compile because Integer is final and cannot be subclassed.
+C.   The code will not compile because class A has no methods or constructor.
+D.   The code will compile correctly, but will throw an ArithmeticException at runtime.
+
+Ans: B
+
+Question : 19
+abstract class A {} // 1
+transient class B {} // 2
+private class C {} // 3
+static class D {} // 4
+
+Which of these declarations will not produce a compile-time error?
+A.   1
+B.   2
+C.   3
+D.   4
+
+Ans: A
+
+Question : 20
+What is displayed when the following piece of code is executed:
+class Test extends Thread{
+public void run(){
+System.out.println("1");
+yield();
+System.out.println(2");
+suspend();
+System.out.println("3");
+resume();
+System.out.println("4");
+}
+public static void main(String []args){
+Test t = new Test();
+t.start();
+}
+}
+A.   1 2 3 4
+B.   1 2 3
+C.   1 2
+D.   Nothing. This is not a valid way to create and start a thread.
+
+Ans: C
+
+Question : 21
+What is the output ?
+
+public class Test {
+    public static void main(String... args) {
+        printUs("ONE", "TWO", "THREE");
+        printUs("FOUR", "FIVE");
+        printUs(new String[]{"SIX", "SEVEN"});
+        printUs();
+    }
+
+    private static void printUs(String... args) {
+        System.out.println("Var args method");
+        for (String s : args) {
+            System.out.println(s);
+        }
+    }
+
+    
+
+}
+A.   Var args method
+ONE
+TWO
+THREE
+Var args method
+FOUR
+FIVE
+Var args method
+SIX
+SEVEN
+Var args method
+B.   Var args method
+ONE
+TWO
+THREE
+Var args method
+FOUR
+FIVE
+Var args method
+SIX
+SEVEN
+C.   Var args method
+SIX
+SEVEN
+D.   None of the above
+
+Ans: A
+
+Question : 22
+
+What will be the result of compiling the following code:
+
+public class Test {
+    public static void main (String args []) {
+        int age;
+        age = age + 1;
+        System.out.println("The age is " + age);
+    }
+}
+A.   the code will compile an print 1.
+B.   the code will compile an print 0.
+C.   Complile time error.
+D.   None of the above
+
+Ans:C
+
+Question : 23
+What will happen when you attempt to compile and run the following code
+
+public class Test extends Thread{
+public static void main(String argv[]){
+Test b = new Test();
+b.start();
+}
+public void run(){
+System.out.println("Running");
+}
+}
+A.   Compilation and run but no output
+B.   Compilation and run with the output "Running"
+C.   Compile time error with complaint of no Thread target
+D.   Compile time error with complaint of no access to Thread package
+
+Ans:B 
+
+Question : 24
+What is the output?
+
+public class Test {
+    
+
+    public static void main(String[] args) {
+        
+        StringBuffer sb = new StringBuffer("ssss");        
+        String st = new String("ssss");
+        System.out.println("st equals sb : " + st.equals(sb));
+
+
+
+    }
+
+
+}
+A.   st equals sb : false
+B.   st equals sb : true
+C.   Compile Error
+D.   Runtime Exception
+
+Ans: A
+
+Question : 25
+
+What is the output of the bellow code ?
+class C1
+{
+static interface I
+{
+static class C2
+{
+}
+
+}
+public static void main(String a[])
+{
+C1.I.C2 ob1=new C1.I.C2();
+System.out.println("object created");
+}
+}
+A.   prints object created
+B.   Compile time error
+C.   Runtime Excepion
+D.   None of the above
+
+Ans: B
+
+Question : 26
+Consider the following class:
+public class Test{
+public int secret;
+}
+Which of the following is the correct way to make the variable 'secret' read-only.
+A.   Declare 'secret' to be private.
+B.   Declare the class Test to be private.
+C.   Declare 'secret' to be private and write a method getSecret() which returns the value of 'secret'.
+D.   Declare 'secret' to be transient.
+Ans: C
+
+Question : 27
+
+What is the output of the below code?
+public class A {
+static{System.out.println("static");}     
+    { System.out.println("block");}
+    public A(){
+        System.out.println("A");
+    }
+
+
+public static void main(String[] args){
+A a = new A();
+}
+
+A.   A block    static
+B.   static block A
+C.   static A
+D.   A
+
+Ans: C
+
+Question : 28
+What outputs are possible from invoking Math.random().
+A.   -0.12 0.56E3
+B.   0.12 1.1E1
+C.   -23.45 0.0
+D.   0.356 0.03
+
+Question : 29
+When a byte is added to a char, what is the type of the result?
+A.   byte
+B.   int
+C.   long
+D.   non of the above
+Ans: A
+
+Question : 30
+Which of the following keywords can be applied to the variables or methods of an interface.
+A.   static
+B.   private
+C.   public
+D.   1 and 3
+
+Ans: c.
+
+Question : 31
+
+What is the output of the below code ?
+
+public class A extends Integer{
+public static void main(Sring[] args){
+System.out.println("Hello");
+}
+}
+What is the output?
+A.   Hello
+B.   Compile Error
+C.   Runtime
+D.   None of the above
+Ans:B
+
+Question : 32
+
+What is output of the below code ?
+
+class C {
+
+public static void main ( String ka [ ] ) {
+
+     Thread t = Thread . currentThread ( ) ;
+t . setPriority ( - 1 ) ;
+System . out . println ( " Done ! " ) ;
+}
+};
+A.   compile time error
+B.   Runtime Exception
+C.   The code compiles and runs fine
+D.   None of the above
+
+Ans: B
+
+Question : 33
+Which one of the following is a limitation of subclassing the Thread class?
+A.   You must catch the ThreadDeath exception.
+B.   You must implement the Threadable interface.
+C.   You cannot have any static methods in the class
+D.   You cannot subclass any other class.
+
+Ans: D
+
+Question : 34
+
+What is the output of the below code?
+class C{
+static int s;
+public static void main(String a[]){
+C obj=new C();
+obj.m1();
+System.out.println(s);
+}
+void m1();
+{
+int x=1;
+m2(x);
+System.out.println(x+"");
+}
+void m2(int x){
+x=x*2;
+s=x;
+}}
+A.   prints 1,2
+B.   prints 2,0
+C.   prints 2,2
+D.   compile time error
+
+Ans: A
+
+Question : 35
+Each element must be unique
+Duplicate elements must not replace old elements.
+Elements are not key/value pairs.
+Accessing an element can be almost as fast as performing a similar operation on an array.
+
+Which of these classes provide the specified features?
+A.   LinkedList
+B.   TreeMap
+C.   HashMap
+D.   HashSet
+Ans: D
+
+Question : 36
+Which of the following classes will not allow unsynchronized read operations by multiple threads?
+A.   Vector
+B.   TreeMap
+C.   TreeSet
+D.   HashMap
+Ans: 
+
+Question : 37
+Which of the following are valid ways to create a Map collection.
+A.   Map m = new Map();
+B.   Map m = new Map(init capacity, increment capacity);
+C.   Map m = new Map(new Collection());
+D.   Map is an interface, and cannot be instantiated.
+Ans: D
+
+Question : 38
+Which of the following are valid ways to define an octal literal of value 17 (octal).
+A.   private final int theNumber = 017;
+B.   public int theNumber = 017;
+C.   public int THE_NUMBER = 017;
+D.   All of the above
+
+Question : 39
+
+What will be the result of compiling the following code:
+
+public class Test {
+    public static void main(String... args) {
+        flipFlop("hello", new Integer(4), 2004);
+    }
+
+    private static void flipFlop(String str, int i, Integer iRef) {
+        System.out.println(str + " (String, int, Integer)");
+    }
+
+    private static void flipFlop(String str, int i, int j) {
+        System.out.println(str + " (String, int, int)");
+    }
+
+    
+
+}
+A.   the code will compile and print hello (String, int, Integer)
+B.   the code will compile an print hello (String, int, int)
+C.   Complile time error.
+D.   None of the above
+Ans: C
+
+Question : 40
+Consider the following code segment and select the correct statement(s):
+1. class FinalTest{
+2. final int q;
+3. final int w = 0;
+4.
+5. FinalTest(){
+6. q = 1;
+7. }
+8.
+9. FinalTest(int x){
+10. q = x;
+11. }
+12. }
+A.   The code fails to compile because a class cannot have more than 1 constructor.
+B.   The code fails to compile because the class FinalTest has no constructors.
+C.   The code fails to compile because the an attempt is made to initialise a final variable at lines 6 and 10.
+D.   The code compiles correctly without any warnings or errors.
+Ans: C
+
+Question : 41
+
+What is the output of the below code?
+class H {
+public static void main (String[] args) {
+String s1 = "HHH";
+StringBuffer sb2 = new StringBuffer(s1);
+System.out.print(sb2.equals(s1) + "," + s1.equals(sb2));
+}}
+A.   Prints: false,false
+B.   Prints: true,false
+C.   Prints: false,true
+D.   Prints: true,true
+
+Ans: A
+
+Question : 42
+
+What is the output of the below code ?
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.NavigableSet;
+import java.util.TreeSet;
+
+
+public class Test {
+    public static void main(String... args) {
+
+        
+         List<Integer> lst = new ArrayList<Integer>();
+         lst.add(34);
+         lst.add(6);
+         lst.add(2);
+         lst.add(8);
+     lst.add(7);
+     lst.add(10);
+    
+     NavigableSet<Integer> nvset = new TreeSet(lst);
+     System.out.println(nvset.lower(6)+" "+nvset.higher(6)+ " "+ nvset.lower(2));
+    
+    }
+}
+
+
+A.   1 2 7 10 34 null
+B.   2 7 null
+C.   2 7 34
+D.   1 2 7 10 34
+
+Question : 43
+What is the output for the bellow code ?
+
+public class Bean {
+    private String str;
+    
+    Bean(String str ){
+        this.str = str;
+    }
+
+
+}
+
+public class Test {
+
+
+public static void main(String argv[]){
+    
+    TreeSet myMap = new TreeSet();
+        String s1 = new String("abcdef");
+        String s2 = new String("abcdef");
+        Bean s3 = new Bean("abcdef");
+        Bean s4 = new Bean("abcdef");
+        
+        myMap.add(s1);
+        myMap.add(s2);
+        myMap.add(s3);
+        myMap.add(s4);
+        
+        System.out.println(myMap);
+
+
+}
+
+}
+A.   abcdef abcdef abcdef abcdef
+B.   abcdef abcdef abcdef
+C.   java.lang.ClassCastException
+D.   None of the above
+
+Ans: C
+Question : 44
+
+What is the output of the below code?
+class A extends Thread {
+private int i;
+public void run() {
+i = 1;
+}
+public static void main(String[] args) {
+A a = new A();
+a.run();
+System.out.print(a.i);
+}
+}
+
+A.   Prints nothing
+B.   Prints: 1
+C.   Prints: 01
+D.   Compile-time error
+
+Question : 45
+What is displayed when the following piece of code is executed:
+class Test extends Thread{
+public void run(){
+System.out.println("1");
+yield();
+System.out.println(2");
+suspend();
+System.out.println("3");
+resume();
+System.out.println("4");
+}
+public static void main(String []args){
+Test t = new Test();
+t.start();
+}
+}
+A.   1 2 3 4
+B.   1 2 3
+C.   1 2
+D.   Nothing. This is not a valid way to create and start a thread.
+Ans: C
+
+Question : 46
+Which is the super class of java.sql.Timestamp?
+A.   java.util.Time
+B.   java.sql.Time
+C.   java.sql.Date
+D.   java.util.Date
+
+Ans;D
+
+Question : 47
+The __________ exception that sleep throws when another thread interrupts the current thread while sleep is active ?
+A.   InterruptedException
+B.   IOException
+C.   SleepException
+D.   None of the above
+Ans; a
+
+Question : 48
+When is the text "Hello" displayed?
+public class StaticTest {
+static {
+System.out.println("Hello");
+}
+
+public void print() {
+System.out.println("Print");
+}
+public static void main(String args []) {
+StaticTest st1 = new StaticTest();
+st1.print();
+StaticTest st2 = new StaticTest();
+st2.print();
+}
+}
+A.   Never.
+B.   Each time a new object of type StaticTest is created.
+C.   Once when the class is loaded into the JVM.
+D.   Only when the main() method is executed.
+
+Ans: C
+Question : 49
+
+
+What is the output of the below code ?
+
+public class SuperClass {
+    private int doIt(){
+        System.out.println("super doIt()");
+        return 1;
+    }
+
+}
+
+public class SubClass extends SuperClass{
+
+    public long doIt()
+    {
+        System.out.println("subclas doIt()");
+        return 0;
+    }
+    
+    public static void main(String... args)
+    {
+        SuperClass sb = new SubClass();
+        
+            sb.doIt();
+        
+        
+    }
+    
+}
+
+A.   subclas doIt()
+B.   super doIt()
+C.   Compile with error
+D.   None of the above
+Ans: A
+
+Question : 50
+
+What is the output of the below code ?
+
+public class C {
+    
+    public C(){
+        
+    }
+
+}
+
+public class D extends C {
+
+    public D(int i){
+        
+        System.out.println("tt");
+    }
+    
+    public D(int i, int j){
+        
+        System.out.println("tt");
+    }
+
+}
+
+public Test{
+public static void main(String[] args){
+C c = new D();
+}
+}
+
+
+
+A.   It compile without any error
+B.   It compile with error
+C.   Can't say
+D.   None of the above
+Ans: B
+
+Question : 51
+What will happen when you attempt to compile and run the following code?
+
+public class Inc{
+public static void main(String argv[]){
+Inc inc = new Inc();
+int i =0;
+inc.fermin(i);
+i = i++;
+System.out.println(i);
+}
+void fermin(int i){
+i++;
+}
+}
+A.   Compile time error
+B.   Output of 2
+C.   Output of 1
+D.   Output of 0
+
+Ans: C
+
+Question : 52
+
+What is the output of the below code?
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+
+public class Test {
+    public static void main(String... args) {
+
+        
+        
+        Queue<String> q = new LinkedList<String>();
+         q.add("newyork");
+         q.add("ca");
+         q.add("texas");
+         show(q);
+         }
+        
+         public static void show(Queue q) {
+         q.add(new Integer(11));
+         while (!q.isEmpty ( ) )
+         System.out.print(q.poll() + " ");
+         }
+
+
+}
+
+A.   Compile error : Integer can't add
+B.   newyork ca texas 11
+C.   newyork ca texas
+D.   None of the above
+
+ans: B
+
+Question : 53
+Which statement is true about String ?
+A.   String objects are immutable, meaning that once created they cannot be altered
+B.   String objects are mutable, meaning that once created they can be altered
+C.   String objects are mutable,meaning that once created they cannot be altered
+D.   None of the above
+
+Ans; A
+
+Question : 54
+Which of the following can be applied to constructors ?
+A.   final
+B.   static
+C.   synchronized
+D.   None of the above
+
+Ans: A
+Question : 55
+What is output of the code bellow ?
+
+public class Test {
+    
+
+    public static void main(String[] args) {
+        List<Integer> list = new ArrayList<Integer>();
+        list.add(0, 59);
+        int total = list.get(0);
+        System.out.println(total);
+
+        
+    }
+
+
+}
+A.   Compile time error, because you have to do
+int total = ((Integer)(list.get(0))).intValue();
+B.   59
+C.   Runtime Exceptions
+D.   None of the above
+Ans: B
+
+Question : 56
+
+Which of the following allows Dirty reads in JDBC Connection?
+
+A.   TRANSACTION_READ_COMMITTED
+B.   TRANSACTION_READ_UNCOMMITTED
+C.   TRANSACTION_REPEATABLE_READ
+D.   TRANSACTION_SERIALIZABLE
+Ans: C
+
+Question : 57
+
+What is the output of the below code ?
+
+class A extends Thread {
+public void run() {
+System.out.print("A");
+}
+}
+class B {
+public static void main (String[] args) {
+A a = new A();
+a.start();
+a.start(); // 1
+}
+}
+A.   compile time error
+B.   Runtime Exception
+C.   the code compile and runs fine
+D.   none of the above
+
+
+Question : 58
+You get this description of a class :
+Employee is a person. For every employee, we keep a vector with the working hours, an integer for the salary and a variable that can be true or false whether or not the employee has a company car.
+Indicate which of the following would be used to define the class members.
+A.   Vector
+B.   Employee
+C.   Object
+D.   boolean
+
+Ans: A, C, D
+
+Question : 59
+
+What is output of the below code ?
+
+public class Test {
+    
+
+    public static void main(String... args) throws Exception {
+        Queue<String> lst = new PriorityQueue<String>();
+     lst.add("one");
+     lst.add("two");
+     System.out.println(lst.poll() +" "+ lst.poll()+ " " +lst.poll());
+    
+    }
+}
+
+
+
+A.   one two null]>
+B.   one two one
+C.  
+D.  
+
+Ans: A
+Question : 60
+What is the valid declaration for the finalize() method.
+A.   protected void finalize() throws Throwable
+B.   final finalize()
+C.   public final finalize()
+D.   private boolean finalize()
+Ans: A
+
+Question : 61
+
+What is the output of the below code ?
+
+import java.util.NavigableMap;
+import java.util.concurrent.ConcurrentSkipListMap;
+
+
+public class Test {
+    public static void main(String... args) {
+
+        
+        NavigableMap <Integer, String>navMap = new
+ConcurrentSkipListMap<Integer, String>();
+        
+        navMap.put(4, "April");
+        navMap.put(5, "May");
+        navMap.put(6, "June");
+        navMap.put(1, "January");
+        navMap.put(2, "February");
+        navMap.put(3, "March");
+
+System.out.print(navMap.firstEntry());
+
+
+         
+    }
+}
+
+A.   Compile error : No method name like firstEntry()
+B.   1=January
+C.   6=June
+D.   4=April
+
+Ans: B
+Question : 62
+
+What is the output of the below code?
+
+public class A implements Serializable {
+    transient int a = 7;
+     static int b = 9;
+
+}
+
+public class B implements Serializable {
+    
+    public static void main(String... args){
+        A a = new A();
+        try {
+         ObjectOutputStream os = new ObjectOutputStream(
+         new FileOutputStream("test.ser"));
+         os.writeObject(a);
+         os. close();
+         System.out.print( + + a.b + " ");
+
+         ObjectInputStream is = new ObjectInputStream(new FileInputStream("test.ser"));
+         A s2 = (A)is.readObject();
+         is.close();
+         System.out.println(s2.a + " " + s2.b);
+         } catch (Exception x)
+         {
+             x.printStackTrace();
+         }
+
+    }
+
+}
+
+A.   9 0 9
+B.   9 7 9
+C.   Runtime Exception
+D.   Compile with error
+
+Question : 63
+
+What is the result of compiling and executing the following code.
+public class Test extends Thread {
+public void run() {
+System.out.println("start");
+yield();
+System.out.println("end");
+}
+public static void main(String args []) {
+(
+new Test()).start();
+}
+}
+A.   The code fails to compile in the main() method.
+B.   The code fails to compile in the run() method.
+C.   Only the text "start" will be displayed.
+D.   The text "start" followed by "end" will be displayed.
+
+Question : 64
+What is the result of the following code :
+public class SuperEx {
+String r;
+String s;
+public SuperEx(String a,String b) {
+     r = a;
+     s = b;
+     }
+public void aMethod() {
+     System.out.println("r :" + r);
+     }
+     }
+
+public class NewSuper extends SuperEx {
+public NewSuper(String a,String b) {
+     super(a,b);
+     }
+public static void main(String args []) {
+     SuperEx a = new SuperEx("Hi","Tom");
+     SuperEx b = new NewSuper("Hi","Bart");
+
+a.aMethod();
+     b.aMethod();
+     }
+public void aMethod() {
+     System.out.println("r :" + r + " s:" + s);
+     }
+     }
+A.   The following is displayed: r:Hi s:Hi
+B.   Compiler error at the line "SuperEx b = new NewSuper("Hi","Bart");"
+C.   The following is displayed: r:Hi r:Hi s:Bart
+D.   The following is displayed r:Hi s:Tom r:Hi s:Bart
+Ans: C
+
+Question : 65
+class C {
+public static void main(String[] args) {
+System.out.println(4+5+"String");
+}}
+A.   prints 9string
+B.   prints 45string
+C.   compile time error
+D.   Runtime exception
+
+Ans: a
+
+Question : 66
+What can cause a thread to stop executing?
+
+1) The program exits via a call to System.exit(0);
+2) Another thread is given a higher priority
+3) A call to the thread's stop method.
+4) A call to the halt method of the Thread class?
+A.   1 , 2 AND 3
+B.   1 , 2 AND 4
+C.   1 AND 4
+D.   None of the above
+
+Question : 67
+
+What is the output of the below code ?
+class c1
+{
+public static void main(String a[])
+{
+c1 ob1=new c1();
+Object ob2=ob1;
+System.out.println(ob2 instanceof Object);
+System.out.println(ob2 instanceof c1);
+}
+}
+A.   Prints true,false
+B.   Print false,true
+C.   Prints true,true
+D.   compile time error
+Ans: B
+
+Question : 68
+Which of the following statements is correct with regard to threads.
+A.   "Runnable" is a keyword within the Java language, used to identify classes which can exist as separate threads.
+B.   "Runnable" is an interface, which classes can implement when they wish to execute as a separate thread.
+C.   "Runnable" is a class, which classes can extend when they wish to execute as a separate thread.
+D.   None of the above.
+Ans: B
+
+Question : 69
+True or False.
+Anonymous classes cannot have constructors.
+A.   True
+B.   False
+C.   None of the above
+D.   None of the above
+
+Ans: A
+Question : 70
+Consider the following piece of code.
+class Test{
+public static void main(String [] args){
+System.out.println(args[3]);
+}
+}
+When the following is typed at the command line, what is displayed:
+java Test hello Justice For All
+A.   All
+B.   For
+C.   hello
+D.   Nothing.
+
+Ans; A
+
+Question : 71
+What is output of the below code ?
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Test {
+    
+    public static void main(String... args) {
+
+        Pattern p = Pattern.compile("a*b");
+        Matcher m = p.matcher("aaaaab");
+        boolean b = m.matches();
+        System.out.println(b);
+
+        
+
+    }
+}
+A.   true
+B.   false
+C.   compile error
+D.   None of the error
+ans: A
+
+Question : 72
+What is the output?
+
+public class Test {
+    
+
+    public static void main(String[] args) {
+        
+        StringBuffer sb = new StringBuffer("ssss");
+        StringBuffer sb_2 = new StringBuffer("ssss");
+        System.out.println("sb equals sb_2 : " + sb.equals(sb_2));
+
+
+    }
+
+
+}
+A.   sb equals sb_2 : false
+B.   sb equals sb_2 : true
+C.   Compile with error
+D.   None of the above
+Ans: A
+
+Question : 73
+Which of the following can be used to define a constructor for this class, given the following code:
+
+public class Test {
+...
+}
+A.   public void Test() {...}
+B.   public Test() {...}
+C.   public static Test() {...}
+D.   public static void Test() {...}
+Ans: B
+
+Question : 74
+What is the output ?
+
+public class Test {
+    
+    public static void main(String... args) {
+        int arr[] = {2,4,8,16,32};        
+        int result = 0;
+        for (int i=0; i<arr.length; i++){
+            result = result + arr[i];
+        }
+         System.out.println("Output old: " + result);
+         result = 0;
+        for(int a:arr)
+        {
+            result = result + a;
+        }
+System.out.println("Output new: "+ result);
+
+
+    }
+}
+A.   Output old: 62
+Output new: 62
+B.   Output old: 62
+Output new: 0
+C.   Compile error
+D.   None of the above
+Ans: A
+
+Question : 75
+Which of the following statements is correct with regard to threads.
+A.   "Runnable" is a keyword within the Java language, used to identify classes which can exist as separate threads.
+B.   "Runnable" is an interface, which classes can implement when they wish to execute as a separate thread.
+C.   "Runnable" is a class, which classes can extend when they wish to execute as a separate thread.
+D.   None of the above.
+
+Ans: B
+
+Question : 76
+Which of the following classes override the equals() method.
+A.   String
+B.   Integer
+C.   Double
+D.   All of the above
+
+Ans: D
+
+Question : 77
+What is the output ?
+
+public interface TestInf {
+int i =10;
+}
+
+public class Test {
+    public static void main(String... args) {
+        TestInf.i=12;
+        System.out.println(TestInf.i);
+    
+    }
+    
+    
+    
+}
+A.   Compile with error
+B.   10
+C.   12
+D.   None of the above
+
+Ans: A
+
+Question : 78
+Which of the following keywords can be applied to a method?
+
+1) transient
+2) volatile
+3) private
+4) protected
+5) final
+A.   1 , 2 and 5
+B.   1, 2 and 3
+C.   3 , 4 and 5
+D.   None of the above
+
+Ans: C
+Question : 79
+
+What is the output of the below code ?
+
+class base
+{
+base(int c)
+{
+System.out.println("base");
+}
+}
+class Super extends base
+{
+Super()
+{
+System.out.println("super");
+}
+public static void main(String [] a)
+{
+base b1=new Super();
+
+}
+}
+A.   compile time error
+B.   runtime exceptione
+C.   the code compiles and runs fine
+D.   None of the above
+Ans: C
+
+Question : 80
+Consider the following.
+String s1 = "abc";
+String s2 = "def";
+String s3 = new String(s2);
+s2 = s1;
+What is the value of s3 after the final line of code is executed?
+A.   "abc"
+B.   "def"
+C.   null
+D.   An exception is thrown when "s2 = s1" is executed.
+Ans: A
+
+Question : 81
+Which of the following interfaces can be used to manage a collection of elements, with no duplication.
+A.   List
+B.   Vector
+C.   Set
+D.   Map
+Ans: C
+
+Question : 82
+
+What is the output of the below code ?
+abstract class vehicle{
+abstract public void speed();
+}
+class car extends vehicle{
+public static void main (String args[]) {
+vehicle ob1;
+ob1=new car(); //1
+
+
+}}
+A.   compiletime error at line 1
+B.   forces the class car to be declared as abstract
+C.   Runtime Exception
+D.   None of the above
+Ans: D
+
+Question : 83
+
+What is the output of the bellow code ?
+
+public class Test {
+    
+
+    public static void main(String[] args) {
+        Integer in = new Integer(null);
+        System.out.println(in.intValue());
+        
+    }
+
+
+}
+A.   0
+B.   Compile with error because , Integer in = new Integer(null);
+C.   java.lang.NumberFormatException
+D.   None of the above
+Ans: C
+
+Question : 84
+Read this piece of code carefully
+    if("String".trim() == "String")    
+    System.out.println("Equal");
+        else
+    System.out.println("Not Equal");
+A.   the code will compile an print "Equal".
+B.   the code will compile an print "Not Equal".
+C.   Not Complile
+D.   None
+
+Ans: A

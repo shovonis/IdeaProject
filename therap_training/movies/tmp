@@ -1,0 +1,11 @@
+--2014-04-17 09:51:24--  https://www.google.com.bd/search?q=Titanic/
+Resolving www.google.com.bd (www.google.com.bd)... 173.194.45.55, 173.194.45.56, 173.194.45.63, ...
+Connecting to www.google.com.bd (www.google.com.bd)|173.194.45.55|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://ipv4.google.com/sorry/IndexRedirect?continue=https://www.google.com.bd/search%3Fq%3DTitanic/ [following]
+--2014-04-17 09:51:26--  https://ipv4.google.com/sorry/IndexRedirect?continue=https://www.google.com.bd/search%3Fq%3DTitanic/
+Resolving ipv4.google.com (ipv4.google.com)... 74.125.200.113, 74.125.200.138, 74.125.200.139, ...
+Connecting to ipv4.google.com (ipv4.google.com)|74.125.200.113|:443... connected.
+HTTP request sent, awaiting response... 503 Service Unavailable
+2014-04-17 09:51:26 ERROR 503: Service Unavailable.
+

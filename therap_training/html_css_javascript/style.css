@@ -1,0 +1,45 @@
+body {
+    color: aliceblue;
+    margin-top: 5em;
+    text-align: center;
+}
+
+h3 {
+    padding-top: 6px;
+    margin-bottom: 6px;
+}
+
+#equal_button {
+    padding: 5px;
+    height: 59px;
+    width: 146px;
+    font-size: 1.2em;
+}
+
+input.button {
+    padding: 5px;
+    height: 60px;
+    width: 70px;
+    font-size: 1.2em;
+
+}
+
+input.display {
+    padding: 6px;
+    height: 76px;
+    width: 428px;
+    text-align: right;
+    font-size: 3em;
+    background: #9CA495;
+    border: 2px solid darkgrey;
+    margin-bottom: 4px;
+}
+
+#calculator {
+    background: dimgrey;
+    padding: 0px 4px 4px;
+    width: 448px;
+    margin-left: 25em;
+    border-radius: 0.5em;
+
+}

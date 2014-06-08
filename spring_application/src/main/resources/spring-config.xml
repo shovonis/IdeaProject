@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+
+    <context:annotation-config/>
+    <context:component-scan base-package="net.therapservices.SpringApplicationPractise"/>
+
+    <!--Sample Beans Def-->
+    <bean id="helloService" class="net.therapservices.SpringApplicationPractise.service.HelloService"/>
+    <bean id="greetings" class="net.therapservices.SpringApplicationPractise.domain.Greetings"/>
+    <bean id="defaultServiceLocator" class="net.therapservices.SpringApplicationPractise.DefaultServiceLocator"/>
+    <bean id="braveKnight" class="net.therapservices.SpringApplicationPractise.domain.BraveKnights"/>
+    <bean id="anotherBean" class="net.therapservices.SpringApplicationPractise.domain.AnotherBean"/>
+    <bean id="yetAnotherBean" class="net.therapservices.SpringApplicationPractise.domain.YetAnotherBean"/>
+
+    <!--Creating bean using static factory method-->
+    <bean id="singleTon" class="net.therapservices.SpringApplicationPractise.domain.ATestSingleTon"
+          factory-method="getInstance"/>
+
+    <!--Creating bean using factory method this is not same as static factory method-->
+    <bean id="clientService" factory-bean="defaultServiceLocator" factory-method="createClientServiceInstance"/>
+
+    <!--Constructor Based DI -->
+    <bean id="exampleBean" class="net.therapservices.SpringApplicationPractise.domain.ExampleBean">
+        <!--Must set value for primitive type-->
+        <constructor-arg name="years" value="2014"/>
+        <constructor-arg name="ultimateAnswer" value="Hi There"/>
+    </bean>
+
+    <!--Setter based DI -->
+    <bean id="exampleBean2" class="net.therapservices.SpringApplicationPractise.domain.ExampleBean2">
+
+        <!--Dont need to set value for reference type-->
+        <property name="beanOne" ref="anotherBean"/>
+        <property name="beanTwo" ref="yetAnotherBean"/>
+        <!--Must set value for primitive type-->
+        <property name="integerProperty" value="10"/>
+    </bean>
+    <!--This is equivalent to the previous Def.    -->
+    <bean id="ex2" class="net.therapservices.SpringApplicationPractise.domain.ExampleBean2"
+          p:beanOne-ref="anotherBean" p:beanTwo-ref="yetAnotherBean" p:integerProperty="10"/>
+
+    <bean id="autoWiredExample" class="net.therapservices.SpringApplicationPractise.domain.AutoWiredExample"
+          autowire="byName">
+    </bean>
+
+    <!--Aspect Oriented Programming -->
+    <aop:config>
+        <aop:aspect ref="greetings">
+            <aop:pointcut id="test"
+                          expression="execution(* net.therapservices.SpringApplicationPractise.domain.BraveKnights.sayGreetings())"/>
+            <aop:before method="sayHello" pointcut-ref="test"/>
+            <aop:after method="sayGoodBye" pointcut-ref="test"/>
+        </aop:aspect>
+    </aop:config>
+
+</beans>
